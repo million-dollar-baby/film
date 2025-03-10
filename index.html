@@ -287,6 +287,23 @@
     transform: translateY(0);
 }
 
+.hamburger-icon {
+   
+    position: fixed;
+    top: 20px;
+    right: 30px;
+    font-size: 2rem;
+    color: white;
+    z-index: 1001;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.hamburger-icon:hover {
+    opacity: 0.7;
+}
+
+
 
 @media (min-width: 500px) and (max-width: 1024px) {
     .container-box {
@@ -361,6 +378,7 @@
 
 
 <body>
+  
     <div class="section entrance-section">
         <div class="box">
             <p class="text">Age no bar for Art</p>
@@ -369,18 +387,24 @@
     </div>
 
     <div class="home-section">
-       <a href="#menu"> <img src="logo.webp"  alt="Gatekeeper Son Films Logo" class="fixed-logo"></a>
+       <a href="#logo"> <img src="logo.webp"  alt="Gatekeeper Son Films Logo" class="fixed-logo"></a>
+
+       <!--hamburger-->
+       <a href="#menu" class="hamburger-icon">
+        <i class="bi bi-list"></i>
+      </a>
+      <!--hamburger-->
 
 
        <!--logo-->
-    <div class="next-section row" style="margin: 0px; width: 100%;" id="logo">  <div class="container-box" style="min-width: 250px;">
-          <video autoplay muted playsinline style="max-width: 100%; height: 90%;">
+       <div class="next-section row" style="margin: 0px; width: 100%;" id="logo">  
+         <div class="container-box" style="min-width: 250px;">
+           <video autoplay muted playsinline style="max-width: 100%; height: 90%;">
             <source src="GSF Logo V2.mp4" type="video/mp4">
-         </video>
-    </div> 
-      </div>
-     
-       <!--logo-->
+           </video>
+          </div> 
+       </div>
+      <!--logo-->
 
 
        <div class="next-section row" style="margin: 0px; width: 100%;" id="gallery">
