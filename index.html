@@ -287,6 +287,40 @@
     transform: translateY(0);
 }
 
+
+@media (min-width: 500px) and (max-width: 1024px) {
+    .container-box {
+        width: 350px; /* Adjust width for better display */
+        height: 550px; /* Adjust height */
+        margin: 20px auto; /* Center the boxes */
+    }
+
+    .box {
+        width: 350px;
+        height: 550px;
+    }
+
+    .text, .scope, p {
+        font-size: 18px;
+        padding: 0 15px;
+    }
+
+    .button {
+        font-size: 1.6rem;
+    }
+
+    .next-section {
+        flex-direction: column; /* Stack sections on smaller tablets */
+        padding: 30px 10px;
+    }
+
+    .col-sm-4 {
+        width: 100%; /* Make columns stack */
+        text-align: center;
+        margin-bottom: 15px;
+    }
+}
+
     </style>
 
 
