@@ -139,11 +139,12 @@
                 margin: 30px 0;
             }
             social-icons a {
-            font-size: 1rem;
+            font-size: 1.2rem;
             margin: 0 10px;
             color: white; /* White color for icons */
             transition: 0.3s;
             align-items: center; /* Center icons horizontally */
+            line-height: 1.2em;
             margin-bottom: 20px;
           
         }
@@ -197,6 +198,13 @@
     background-color: transparent;
     color: white;
 }
+
+.form-group {
+            width: 60%;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
 
 }
 
@@ -368,6 +376,31 @@
         margin-bottom: 15px;
     }
 }
+
+
+.form-group {
+            width: 80%;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        input[type="email"] {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        #form_button {
+            background: #007BFF;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #form_button:hover {
+            background: #0056b3;
+        }
 
     </style>
 
@@ -612,7 +645,13 @@ for everyone / any and every audience.</h4>
                 <a href="#"><i class="bi bi-youtube"></i></a>
                 <a href="#"><i class="bi bi-linkedin"></i></a>
             </div><br>
-          
+            <form id="signup-form">
+                <div class="form-group">
+                    <input type="email" id="email" name="email" placeholder="Enter your email">
+                    <button type="submit" id="form_button">Sign Up</button>
+                </div>
+                
+            </form>
 
         </div>
 
