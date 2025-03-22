@@ -10,6 +10,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Stoke:wght@300;400&display=swap" rel="stylesheet">
 
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
      <!-- Bootstrap Icons -->
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
 
@@ -123,7 +128,8 @@
             justify-content: center;
             align-items: center;
             margin: 40px 0;
-            border: 20px solid white; /* Added white bottom border */
+            border: 0px solid white; /* Added white bottom border  ZZZZZ*/
+            border-bottom: 2px solid white;
         }
         .next-section h4 {
             text-align: center;
@@ -302,12 +308,23 @@
             background-color: #555;
         }
         .scope{
-            font-size: 20px;
-            font-family: "Stoke", serif;
+            font-size: 18px;
+            font-family: "Courier Prime", monospace;
             font-weight: 400;
             font-style: normal;
-            line-height: 1.2em;  
+            line-height: 1.2em; 
+            text-align: justify;
         }
+
+        .mid-box{
+            font-size: 18px;
+            font-family: "Stoke", serif;
+            font-weight: 700;
+            font-style: normal;
+            line-height: 1.2em; 
+        }
+
+
         p{
           font-size:16px;
           text-align: left;
@@ -331,6 +348,7 @@
     opacity: 1;
     transform: translateY(0);
 }
+
 
 .hamburger-icon {
    background-color: #fbb040;
@@ -451,9 +469,9 @@
 <body>
   
     <div class="section entrance-section">
-        <div class="box">
-            <p class="text">Age no bar for Art</p>
+        <div class="box" style="vertical-align: middle;">
             <div class="button" onclick="goToHomePage()">E N T E R</div>
+            <p class="text">Age no bar for Art</p>
         </div>
     </div>
 
@@ -481,7 +499,7 @@
        <div class="next-section row" style="margin: 0px; width: 100%;" id="gallery">
         <div class="col-sm-4"><h4></h4></div>
         <div class="container-box" style="min-width: 250px;">
-            <h4 class="scope">It’s a Gateway to a Commune
+            <h4 class="mid-box">It’s a Gateway to a Commune
 where filmmakers and financier connect
 and collaborate to make engaging films
 for everyone / any and every audience.</h4>
@@ -521,11 +539,12 @@ for everyone / any and every audience.</h4>
     <div class="next-section row" style="margin: 0px; width: 100%;" id="menu">
         <div class="col-sm-4"></div>
         <div class="container-box" style="min-width: 250px;">
-            <ul class="scope" style="font-size: 22px; line-height: 1.5em;">
-                <li><a href="#logo">Start</a></li>
+            <ul class="mid-box" style="font-size: 22px; line-height: 1.5em;">
+                <li><a href="#logo">Home</a></li>
+                <li><a href="#gallery">About</a></li>
                 <li><a href="#about">Vision</a></li>
                 <li><a href="#services">Services</a></li>
-                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#gallery2">Gallery</a></li>
                 <li><a href="#rewards">Rewards</a></li>
                 <li><a href="#members">Members</a></li>
                 <li><a href="#contact">Connect</a></li>
@@ -585,7 +604,27 @@ for everyone / any and every audience.</h4>
     </div>
     </div>
 
-    <div class="next-section row" style="margin: 0px; width: 100%;" id="gallery">
+    <div class="next-section row" style="margin: 0px; width: 100%;" id="serviceDetails">
+        <div class="col-sm-4"></div>
+        <div class="container-box" style="min-width: 250px;">
+            <ul class="mid-box" style="font-size: 22px; line-height: 1.5em;">
+                <li><a href="#">Feature Film</a></li>
+                <li><a href="#">Short Films</a></li>
+                <li><a href="#">Ad Film</a></li>
+                <li><a href="#">Web Series</a></li>
+                <li><a href="#">Animation Films</a></li>
+                <li><a href="#">Documentaries</a></li>
+                <li><a href="#">Corporate Films</a></li>
+                <li><a href="#">Music Video</a></li>
+                <li><a href="#">Youtube Content</a></li>
+                <li><a href="#">Vertical Content</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-4"></div>
+
+    </div>
+
+    <div class="next-section row" style="margin: 0px; width: 100%;" id="gallery2">
         <div class="col-sm-4"><img src="gallery_pic.webp" style="width: 100%; height: 60%;"></div>
         <div class="container-box" style="min-width: 250px;">
             <h4 class="vert">Gallery</h4>
@@ -635,11 +674,11 @@ for everyone / any and every audience.</h4>
          <!-- Test Section -->
 
      <div class="next-section row" style="margin: 0px; width: 100%;" id="contact">
-        <div class="col-sm-4"><h4>
-       
-               <p>Tel - 0222765486<br>Email - <a href="mailto:demo@gmail.com">demo@gmail.com</a><br>Address - Akshya Nagar 1st Block 1st Cross, Rammurthy nagar, Bangalore-560016</p><br>
-               <p class="scope"><a href="mailto:demo@gmail.com">Email Us</a></p>
-            </h4>
+        <div class="col-sm-4">
+            <p><b><a href="mailto:reach@gatekeepersonfilms.com">reach@gatekeepersonfilms.com</a></b></br> for enquiry</p> </br>
+            <p><b><a href="mailto:connect@gatekeepersonfilms.com">connect@gatekeepersonfilms.com</a></b></br> to be a member</p> </br>
+            <p><b><a href="mailto:collaborate@gatekeepersonfilms.com">collaborate@gatekeepersonfilms.com</a></b></br> for business</p> </br>
+            
         </div>
         <div class="container-box" style="min-width: 250px;">
             <h4 class="vert">Connect</h4>
@@ -650,7 +689,6 @@ for everyone / any and every audience.</h4>
                 <a href="#"><i class="bi bi-twitter-x"></i></a>  <!-- X (formerly Twitter) -->
                 <a href="#"><i class="bi bi-instagram"></i></a>
                 <a href="#"><i class="bi bi-youtube"></i></a>
-                <a href="#"><i class="bi bi-linkedin"></i></a>
             </div><br>
             <form id="signup-form">
                 <div class="form-group">
