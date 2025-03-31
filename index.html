@@ -1,5 +1,6 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,17 +14,49 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
 
-     <!-- Bootstrap Icons -->
-     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
 
-     <!-- Font Awesome (Optional) -->
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-     <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Font Awesome (Optional) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
     <style>
+        /* Typewriter effect */
+        @keyframes typewriter {
+            from {
+                width: 0;
+            }
+
+            to {
+                width: 100%;
+            }
+        }
+
+        .typewriter {   
+            display: inline-block;
+            overflow: hidden;
+            border-right: 2px solid white; /* Cursor effect */
+            animation: blink 0.5s step-end infinite alternate;
+            word-wrap: break-word; /* Allow text to wrap */
+            white-space: normal; /* Allow text to wrap */
+        }
+
+        @keyframes blink {
+            from {
+                border-color: transparent;
+            }
+
+            to {
+                border-color: white;
+            }
+        }
+
+
         body {
             background-color: #fbb040;
             text-align: center;
@@ -31,8 +64,10 @@
             padding: 20px;
             margin: 0;
         }
+
         .entrance-section {
-            min-height: 80vh; /* Reduced height */
+            min-height: 80vh;
+            /* Reduced height */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -40,10 +75,12 @@
             transition: opacity 1s ease-out, visibility 1s;
             padding: 40px 0;
         }
+
         .fade-out {
             opacity: 0;
             visibility: hidden;
         }
+
         .box {
             width: 400px;
             height: 600px;
@@ -55,6 +92,7 @@
             align-items: center;
             box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
         }
+
         .text {
             font-size: 18px;
             font-family: "Stoke", serif;
@@ -63,6 +101,7 @@
             text-align: center;
             padding: 0 0;
         }
+
         .button1 {
             font-size: 1.8rem;
             font-family: "Stoke", serif;
@@ -72,8 +111,9 @@
             margin: 15px 0;
             writing-mode: vertical-rl;
             text-orientation: upright;
-           
+
         }
+
         .home-section {
             display: none;
             min-height: 100vh;
@@ -82,6 +122,7 @@
             flex-direction: column;
             position: relative;
         }
+
         .container-box {
             width: 400px;
             height: 600px;
@@ -93,11 +134,13 @@
             border: 20px solid white;
             color: white;
             text-align: center;
-            padding: 10px 20px; /* Reduced padding */
+            padding: 10px 20px;
+            /* Reduced padding */
             box-sizing: border-box;
             margin: 40px 0;
             box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
         }
+
         .logo {
             font-size: 1.8rem;
             font-weight: bold;
@@ -106,6 +149,7 @@
             flex-direction: column;
             align-items: center;
         }
+
         .bars {
             display: flex;
             justify-content: center;
@@ -113,16 +157,19 @@
             margin-top: 10px;
             flex-wrap: wrap;
         }
+
         .bar {
             width: 10px;
             height: 60px;
             background: white;
         }
+
         .footer-text {
             margin-top: 10px;
             font-size: 1rem;
             font-weight: bold;
         }
+
         .next-section {
             min-height: 100vh;
             overflow-y: auto;
@@ -131,125 +178,142 @@
             justify-content: center;
             align-items: center;
             margin: 40px 0;
-            border: 0px solid white; /* Added white bottom border  ZZZZZ*/
+            border: 0px solid white;
+            /* Added white bottom border  ZZZZZ*/
             border-bottom: 2px solid white;
         }
+
         .next-section h4 {
             text-align: center;
             padding: 0 5%;
         }
+
         @media (max-width: 500px) {
             .container-box {
                 width: 300px;
                 height: 500px;
                 margin: 30px 0;
             }
+
             .next-section {
                 margin: 30px 0;
             }
+
             social-icons a {
-            font-size: 1.2rem;
-            margin: 0 10px;
-            color: white; /* White color for icons */
-            transition: 0.3s;
-            align-items: center; /* Center icons horizontally */
-            line-height: 1.2em;
-            margin-bottom: 20px;
-          
-        }
-        .social-icons a:hover {
-            opacity: 0.7;
-        }
-        .btn-social {
-            background-color: #333; /* Dark buttons */
-            color: white;
-            border: none;
-            transition: 0.3s;
-        }
-        .btn-social:hover {
-            background-color: #555;
-        }
+                font-size: 1.2rem;
+                margin: 0 10px;
+                color: white;
+                /* White color for icons */
+                transition: 0.3s;
+                align-items: center;
+                /* Center icons horizontally */
+                line-height: 1.2em;
+                margin-bottom: 20px;
+
+            }
+
+            .social-icons a:hover {
+                opacity: 0.7;
+            }
+
+            .btn-social {
+                background-color: #333;
+                /* Dark buttons */
+                color: white;
+                border: none;
+                transition: 0.3s;
+            }
+
+            .btn-social:hover {
+                background-color: #555;
+            }
         }
 
 
         @media (max-width: 500px) {
             .box {
-            width: 300px;
-            height: 500px;
-            padding: 4%;
-            border: 20px solid white;
-            background-color: #fbb040;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
-        }
-        .text {
-            font-size: 1.2rem;
-            font-family: "Stoke", serif;
-            font-weight: 400;
-            font-style: normal;
-        }
-        .button1 {
+                width: 300px;
+                height: 500px;
+                padding: 4%;
+                border: 20px solid white;
+                background-color: #fbb040;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+            }
+
+            .text {
+                font-size: 1.2rem;
+                font-family: "Stoke", serif;
+                font-weight: 400;
+                font-style: normal;
+            }
+
             .button1 {
-    font-size: 1.8rem;
-    font-weight: bold;
-    cursor: pointer;
-    margin: 15px 0;
-    writing-mode: vertical-rl;
-    text-orientation: upright;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100px; /* Adjust as needed */
-    width: 50px;  /* Adjust as needed */
-    border: 2px solid white;
-    background-color: transparent;
-    color: white;
-}
+                .button1 {
+                    font-size: 1.8rem;
+                    font-weight: bold;
+                    cursor: pointer;
+                    margin: 15px 0;
+                    writing-mode: vertical-rl;
+                    text-orientation: upright;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: 100px;
+                    /* Adjust as needed */
+                    width: 50px;
+                    /* Adjust as needed */
+                    border: 2px solid white;
+                    background-color: transparent;
+                    color: white;
+                }
 
-}
+            }
 
-        .fixed-logo {
-       display:none;
-        }
-       .next-section {
-            min-height: 100vh;
-            overflow-y: auto;
-            padding: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 40px 0;
-            border: 0px solid white; /* Added white bottom border */
+            .fixed-logo {
+                display: none;
+            }
 
-        }
+            .next-section {
+                min-height: 100vh;
+                overflow-y: auto;
+                padding: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 40px 0;
+                border: 0px solid white;
+                /* Added white bottom border */
+
+            }
 
         }
 
 
         ul {
-        list-style-type: none;
-        padding: 0;
-    }
+            list-style-type: none;
+            padding: 0;
+        }
 
-    ul li {
-        margin: 10px 0;
-    }
+        ul li {
+            margin: 10px 0;
+        }
 
-    ul li a {
-        color: white;
-        font-weight: 700;
-        font-size: 20px;
-        text-decoration: none;
-        transition: color 0.3s ease;
-    }
+        ul li a {
+            color: white;
+            font-weight: 700;
+            font-size: 20px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
 
-    ul li a:hover {
-        color: grey;
-    }
+        ul li a:hover {
+            color: grey;
+        }
 
-    .fixed-logo {
+        .fixed-logo {
             position: fixed;
             top: 10px;
             left: 30px;
@@ -258,7 +322,7 @@
             z-index: 1000;
         }
 
-       .vert{
+        .vert {
             font-size: 2rem;
             cursor: pointer;
             margin: 15px 0;
@@ -268,190 +332,341 @@
             font-weight: 400;
             font-style: normal;
             text-transform: uppercase;
-            letter-spacing:13px;
+            letter-spacing: 13px;
 
-       }     
-       
-       
+        }
 
-       .social-icons a {
+
+
+        .social-icons a {
             font-size: 1.8rem;
             margin: 0 10px;
-            color: white; /* White color for icons */
+            color: white;
+            /* White color for icons */
             transition: 0.3s;
-            align-items: center; /* Center icons horizontally */
+            align-items: center;
+            /* Center icons horizontally */
             line-height: 1.2em;
             margin-bottom: 20px;
-          
+
         }
+
         .social-icons a:hover {
             opacity: 0.7;
         }
+
         .btn-social {
-            background-color: #333; /* Dark buttons */
+            background-color: #333;
+            /* Dark buttons */
             color: white;
             border: none;
             transition: 0.3s;
         }
+
         .btn-social:hover {
             background-color: #555;
         }
-        .scope{
+
+        .scope {
             font-size: 18px;
             font-family: "Courier Prime", monospace;
             font-weight: 400;
             font-style: normal;
-            line-height: 1.2em; 
+            line-height: 1.2em;
             text-align: justify;
         }
 
-        .mid-box{
+        .mid-box {
             font-size: 18px;
             font-family: "Stoke", serif;
             font-weight: 700;
             font-style: normal;
-            line-height: 1.2em; 
+            line-height: 1.2em;
         }
 
 
-        p{
-          font-size:16px;
-          text-align: left;
-          padding:0 20px;  
-          font-weight: 400;
+        p {
+            font-size: 16px;
+            text-align: left;
+            padding: 0 20px;
+            font-weight: 400;
         }
+
         p a {
             text-decoration: none;
             color: white;
         }
 
-/* Initially hide sections */
-.next-section {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 1s ease-out, transform 1s ease-out;
-}
+        /* Initially hide sections */
+        .next-section {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
 
-/* When in view, fade in */
-.next-section.in-view {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-
-.hamburger-icon {
-   background-color: #fbb040;
-   padding:2px 5px;
-    position: fixed;
-    top: 20px;
-    right: 30px;
-    font-size: 2rem;
-    color: white;
-    z-index: 1001;
-    cursor: pointer;
-    text-decoration: none;
-}
-
-.hamburger-icon:hover {
-    opacity: 0.7;
-}
+        /* When in view, fade in */
+        .next-section.in-view {
+            opacity: 1;
+            transform: translateY(0);
+        }
 
 
-@media (min-width: 500px) and (max-width: 1024px) {
-    .container-box {
-        width: 350px; /* Adjust width for better display */
-        height: 550px; /* Adjust height */
-        margin: 20px auto; /* Center the boxes */
-    }
+        .hamburger-icon {
+            background-color: #fbb040;
+            padding: 2px 5px;
+            position: fixed;
+            top: 20px;
+            right: 30px;
+            font-size: 2rem;
+            color: white;
+            z-index: 1001;
+            cursor: pointer;
+            text-decoration: none;
+        }
 
-    .box {
-        width: 350px;
-        height: 550px;
-    }
+        .hamburger-icon:hover {
+            opacity: 0.7;
+        }
 
-    .text, .scope, p {
-        font-size: 18px;
-        padding: 0 15px;
-    }
 
-    .button1 {
-        font-size: 1.6rem;
- 
-    }
+        @media (min-width: 500px) and (max-width: 1024px) {
+            .container-box {
+                width: 350px;
+                /* Adjust width for better display */
+                height: 550px;
+                /* Adjust height */
+                margin: 20px auto;
+                /* Center the boxes */
+            }
 
-    .next-section {
-        flex-direction: column; /* Stack sections on smaller tablets */
-        padding: 30px 10px;
-    }
+            .box {
+                width: 350px;
+                height: 550px;
+            }
 
-    .col-sm-4 {
-        width: 100%; /* Make columns stack */
-        text-align: center;
-        margin-bottom: 15px;
-    }
-}
+            .text,
+            .scope,
+            p {
+                font-size: 18px;
+                padding: 0 15px;
+            }
 
-#mc_embed_signup {
-            background: #ffffff;
+            .button1 {
+                font-size: 1.6rem;
+
+            }
+
+            .next-section {
+                flex-direction: column;
+                /* Stack sections on smaller tablets */
+                padding: 30px 10px;
+            }
+
+            .col-sm-4 {
+                width: 100%;
+                /* Make columns stack */
+                text-align: center;
+                margin-bottom: 15px;
+            }
+        }
+
+        #mc_embed_signup {
             padding: 20px;
             border-radius: 8px;
             max-width: 400px;
             margin: auto;
-        } 
-              h3{
+            text-align: left;
+        }
+
+        h3 {
             color: black;
             font-size: 30px;
         }
-        
-     #emial_design{
-        color: black;
-     }
-     
-     #mc-embedded-subscribe{
-        margin-top: 20px;
-         text-align: right;
-     }  
+
+        #emial_design {
+            color: black;
+        }
+
+        #mc-embedded-subscribe {
+            margin-top: 20px;
+            text-align: right;
+        }
+
+      <!--Mailchimp-->
+
+      /* Mailchimp Container */
+.mailchimp-container {
+    background-color: #fbb040; /* Match website theme */
+    border: 2px solid white; /* Add a border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px;
+    max-width: 400px;
+    margin: 20px auto; /* Center the form */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+    text-align: center;
+}
+
+/* Title Styling */
+.mailchimp-title {
+    font-size: 1.5rem;
+    font-family: "Stoke", serif;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 15px;
+}
+
+/* Label Styling */
+.mailchimp-label {
+    font-size: 1rem;
+    font-family: "Courier Prime", monospace;
+    font-weight: 400;
+    color: white;
+    display: block;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+/* Input Field Styling */
+.mailchimp-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    font-family: "Courier Prime", monospace;
+    border: 2px solid white;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    background-color: #fff;
+    color: #333;
+}
+
+/* Input Field Focus */
+.mailchimp-input:focus {
+    outline: none;
+    border-color: #333;
+}
+
+/* Button Styling */
+.mailchimp-button {
+    background-color: white;
+    color: #fbb040;
+    font-size: 1rem;
+    font-family: "Stoke", serif;
+    font-weight: 700;
+    padding: 10px 20px;
+    border: 2px solid white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Button Hover Effect */
+.mailchimp-button:hover {
+    background-color: #fbb040;
+    color: white;
+    border-color: white;
+}
+
 
     </style>
 
     <script>
-        function goToHomePage() {
-            document.querySelector('.entrance-section').classList.add('fade-out');
-            setTimeout(() => {
-                document.querySelector('.entrance-section').style.display = 'none';
-                document.querySelector('.home-section').style.display = 'flex';
-            }, 2000);
-        }
-
-
         document.addEventListener("DOMContentLoaded", function () {
-        const sections = document.querySelectorAll(".next-section");
+            // Typewriter Effect
+            const sections = document.querySelectorAll(".next-section");
 
-        const observer = new IntersectionObserver(
-            (entries, observer) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add("in-view");
-                        observer.unobserve(entry.target); // Stop observing once it's visible
+            const observer = new IntersectionObserver(
+                (entries, observer) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            const leftParagraph = entry.target.querySelector(".col-sm-4:first-child p");
+                            const rightParagraph = entry.target.querySelector(".col-sm-4:last-child p");
+
+                            if (rightParagraph) {
+                                rightParagraph.style.visibility = "hidden"; // Hide the right paragraph initially
+                            }
+
+                            if (leftParagraph) {
+                                startTypewriter(leftParagraph, () => {
+                                    if (rightParagraph) {
+                                        rightParagraph.style.visibility = "visible"; // Show the right paragraph
+                                        startTypewriter(rightParagraph);
+                                    }
+                                });
+                            }
+
+                            observer.unobserve(entry.target); // Stop observing once triggered
+                        }
+                    });
+                },
+                { threshold: 0.5 } // Trigger when 50% of section is visible
+            );
+
+            sections.forEach((section) => {
+                observer.observe(section);
+            });
+
+            function startTypewriter(element, callback) {
+                const text = element.textContent;
+                element.textContent = ""; // Clear the text
+                element.classList.add("typewriter");
+
+                let i = 0;
+                const interval = setInterval(() => {
+                    if (i < text.length) {
+                        element.textContent += text.charAt(i);
+                        i++;
+                    } else {
+                        clearInterval(interval);
+                        element.classList.remove("typewriter");
+                        if (callback) callback(); // Call the callback after typing is complete
                     }
-                });
-            },
-            { threshold: 0.2 } // Trigger when 20% of section is visible
-        );
+                }, 50); // Adjust typing speed here
+            }
 
-        sections.forEach((section) => {
-            observer.observe(section);
+            // Fade-in Effect for Sections
+            const fadeObserver = new IntersectionObserver(
+                (entries, observer) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add("in-view");
+                            observer.unobserve(entry.target); // Stop observing once it's visible
+                        }
+                    });
+                },
+                { threshold: 0.2 } // Trigger when 20% of section is visible
+            );
+
+            sections.forEach((section) => {
+                fadeObserver.observe(section);
+            });
+
+            // Entrance Section Transition to Home Section
+            function goToHomePage() {
+                const entranceSection = document.querySelector('.entrance-section');
+                const homeSection = document.querySelector('.home-section');
+
+                entranceSection.classList.add('fade-out');
+                setTimeout(() => {
+                    entranceSection.style.display = 'none';
+                    homeSection.style.display = 'flex';
+                }, 2000); // Adjust timing as needed
+            }
+
+            // Attach the goToHomePage function to the button
+            const enterButton = document.querySelector('.button1');
+            if (enterButton) {
+                enterButton.addEventListener('click', goToHomePage);
+            }
         });
-    });
-
-  
     </script>
+
 </head>
 
 
 
 <body>
-  
+
     <div class="section entrance-section">
         <div class="box" style="vertical-align: middle;">
             <div class="button1" onclick="goToHomePage()">E N T E R</div>
@@ -460,267 +675,288 @@
     </div>
 
     <div class="home-section">
-       <a href="#logo"> <img src="logo.webp"  alt="Gatekeeper Son Films Logo" class="fixed-logo"></a>
+        <a href="#logo"> <img src="logo.webp" alt="Gatekeeper Son Films Logo" class="fixed-logo"></a>
 
-       <!--hamburger-->
-       <a href="#menu" class="hamburger-icon">
-        <i class="bi bi-list"></i>
-      </a>
-      <!--hamburger-->
-
-
-       <!--logo-->
-       <div class="next-section row" style="margin: 0px; width: 100%;" id="logo">  
-         <div class="container-box" style="min-width: 250px;">
-           <video autoplay muted playsinline style="max-width: 100%; height: 90%;">
-            <source src="GSF Logo V2.mp4" type="video/mp4">
-           </video>
-          </div> 
-       </div>
-      <!--logo-->
+        <!--hamburger-->
+        <a href="#menu" class="hamburger-icon">
+            <i class="bi bi-list"></i>
+        </a>
+        <!--hamburger-->
 
 
-       <div class="next-section row" style="margin: 0px; width: 100%;" id="gallery">
-        <div class="col-sm-4"><h4></h4></div>
-        <div class="container-box" style="min-width: 250px;">
-            <h4 class="mid-box">
-                It’s a Gateway to a Commune for the filmmakers 
-                and financiers to connect and collaborate to make 
-                good films to engage any and every audience around the world
-            </h4>
+        <!--logo-->
+        <div class="next-section row" style="margin: 0px; width: 100%;" id="logo">
+            <div class="container-box" style="min-width: 250px;">
+                <video autoplay muted playsinline style="max-width: 100%; height: 90%;">
+                    <source src="GSF Logo V2.mp4" type="video/mp4">
+                </video>
+            </div>
         </div>
-        <div class="col-sm-4"></div>
-
-    </div>
+        <!--logo-->
 
 
+        <div class="next-section row" style="margin: 0px; width: 100%;" id="gallery">
+            <div class="col-sm-4">
+                <h4></h4>
+            </div>
+            <div class="container-box" style="min-width: 250px;">
+                <h4 class="mid-box">
+                    It’s a Gateway to a Commune for the filmmakers
+                    and financiers to connect and collaborate to make
+                    good films to engage any and every audience around the world
+                </h4>
+            </div>
+            <div class="col-sm-4"></div>
 
-     <div class="next-section row" style="margin: 0px; width: 100%;" id="gallery">
-        <div class="col-sm-4">
-            <p class="scope" >“It’s not a typical film production house formed by the founders and led by the bosses.
-            It’s a platform of the people by the people and for the people, where anyone, everyone, all the film enthusiasts and aspirants, 
-            irrespective of their backgrounds, can come forward with a story
-            to get together and make films together”
-            </p>
-         </div>
-        <div class="container-box" style="min-width: 250px;">
-            <h4 class="vert">About</h4>
-        </div>
-        <div class="col-sm-4">
-            <p class="scope" >“It’s a cinematic congregation
-            for the voiceless to find their voice,
-            for the rejected to find their opportunity,
-            for the hopeless to find their strength,
-            to join, participate and practice
-            the joy pain and adventure of filmmaking
-            without any bias, boundaries or fear
-            for the greater good of cinema”
-            </p>
         </div>
 
-    </div>
 
 
-      
-       <!--Menu-->
-    <div class="next-section row" style="margin: 0px; width: 100%;" id="menu">
-        <div class="col-sm-4"></div>
-        <div class="container-box" style="min-width: 250px;">
-            <ul class="mid-box" style="font-size: 22px; line-height: 1.5em;">
-                <li><a href="#logo">Home</a></li>
-                <li><a href="#gallery">About</a></li>
-                <li><a href="#about">Vision</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#gallery2">Gallery</a></li>
-                <li><a href="#rewards">Rewards</a></li>
-                <li><a href="#members">Members</a></li>
-                <li><a href="#contact">Connect</a></li>
-            </ul>
+        <div class="next-section row" style="margin: 0px; width: 100%;" id="gallery">
+            <div class="col-sm-4">
+                <p class="scope">It’s not a typical film production house formed by the founders and led by the bosses.
+                    It’s a platform of the people by the people and for the people, where anyone, everyone, all the film
+                    enthusiasts and aspirants,
+                    irrespective of their backgrounds, can come forward with a story
+                    to get together and make films together.
+                </p>
+            </div>
+            <div class="container-box" style="min-width: 250px;">
+                <h4 class="vert">About</h4>
+            </div>
+            <div class="col-sm-4">
+                <p class="scope">It’s a cinematic congregation
+                    for the voiceless to find their voice,
+                    for the rejected to find their opportunity,
+                    for the hopeless to find their strength,
+                    to join, participate and practice
+                    the joy pain and adventure of filmmaking
+                    without any bias, boundaries or fear
+                    for the greater good of cinema.
+                </p>
+            </div>
+
         </div>
-        <div class="col-sm-4"></div>
-
-    </div>
-      <!--Menu-->
 
 
-    <div class="next-section row" style="margin: 0px; width: 100%;" id="about">
-        <div class="col-sm-4"><p class="scope">Our story is your story
-            and together we can make it a universal story, for
-            a film without a story is unimaginable, and for that
-            we must take an oath together to maintain the cinematic integrity
-            in quest for good stories to make good films,
-            both critically and commercially,
-            domestically as well as internationally,
-            and consistently.
-            </p></div>
-        <div class="container-box" style="min-width: 250px;">
-            <h4 class="vert">Vision</h4>
+
+        <!--Menu-->
+        <div class="next-section row" style="margin: 0px; width: 100%;" id="menu">
+            <div class="col-sm-4"></div>
+            <div class="container-box" style="min-width: 250px;">
+                <ul class="mid-box" style="font-size: 22px; line-height: 1.5em;">
+                    <li><a href="#logo">Home</a></li>
+                    <li><a href="#gallery">About</a></li>
+                    <li><a href="#about">Vision</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#gallery2">Gallery</a></li>
+                    <li><a href="#rewards">Rewards</a></li>
+                    <li><a href="#members">Members</a></li>
+                    <li><a href="#contact">Connect</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4"></div>
+
         </div>
-        <div class="col-sm-4"><p class="scope">Our approach is 
-            not to defy the system but to befriend it
-            by building the bridge of films for stories to find the studios
-            to reach the larger and wider audience
-            for the benefit of all parties involved
-            to share and cherish its success together.
-            </p></div>
+        <!--Menu-->
 
-    </div>
 
-    <div class="next-section row" style="margin: 0px; width: 100%;" id="services">
-        <div class="col-sm-4">
-            <p class="scope">
-                With the lines getting blurred between the small 
-                and big screens these days, the scope of excellence 
-                in creative services holds no boundaries and has no limits.
-                
-            </p>
+        <div class="next-section row" style="margin: 0px; width: 100%;" id="about">
+            <div class="col-sm-4">
+                <p class="scope">Our story is your story
+                    and together we can make it a universal story, for
+                    a film without a story is unimaginable, and for that
+                    we must take an oath together to maintain the cinematic integrity
+                    in quest for good stories to make good films,
+                    both critically and commercially,
+                    domestically as well as internationally,
+                    and consistently.
+                </p>
+            </div>
+            <div class="container-box" style="min-width: 250px;">
+                <h4 class="vert">Vision</h4>
+            </div>
+            <div class="col-sm-4">
+                <p class="scope">Our approach is
+                    not to defy the system but to befriend it
+                    by building the bridge of films for stories to find the studios
+                    to reach the larger and wider audience
+                    for the benefit of all parties involved
+                    to share and cherish its success together.
+                </p>
+            </div>
+
         </div>
-        <div class="container-box" style="min-width: 250px;">
-            <h4 class="vert">Services</h4>
+
+        <div class="next-section row" style="margin: 0px; width: 100%;" id="services">
+            <div class="col-sm-4">
+                <p class="scope">
+                    With the lines getting blurred between the small
+                    and big screens these days, the scope of excellence
+                    in creative services holds no boundaries and has no limits.
+
+                </p>
+            </div>
+            <div class="container-box" style="min-width: 250px;">
+                <h4 class="vert">Services</h4>
+            </div>
+            <div class="col-sm-4">
+                <p class="scope">
+                    While others focus only on producing films as a business We,
+                    besides doing the same, aim to produce filmmakers (Writers, Directors,
+                    DOPs, Producers, Editors, Production Designers, Music Directors, & so on.)
+                    and create a novelty (of talents) that can be a force to reckon with.
+
+                </p>
+            </div>
         </div>
-        <div class="col-sm-4">    
-         <p class="scope">
-            While others focus only on producing films as a business We, 
-            besides doing the same, aim to produce filmmakers (Writers, Directors,
-             DOPs, Producers, Editors, Production Designers, Music Directors, & so on.)
-              and create a novelty (of talents) that can be a force to reckon with.
-            
-         </p>
-    </div>
-    </div>
 
-    <div class="next-section row" style="margin: 0px; width: 100%;" id="serviceDetails">
-        <div class="col-sm-4"></div>
-        <div class="container-box" style="min-width: 250px;">
-            <ul class="mid-box" style="font-size: 22px; line-height: 1.5em;">
-                <li><a href="#">Feature Film</a></li>
-                <li><a href="#">Short Films</a></li>
-                <li><a href="#">Ad Film</a></li>
-                <li><a href="#">Web Series</a></li>
-                <li><a href="#">Animation Films</a></li>
-                <li><a href="#">Documentaries</a></li>
-                <li><a href="#">Corporate Films</a></li>
-                <li><a href="#">Music Video</a></li>
-                <li><a href="#">Youtube Content</a></li>
-                <li><a href="#">Vertical Content</a></li>
-            </ul>
+        <div class="next-section row" style="margin: 0px; width: 100%;" id="serviceDetails">
+            <div class="col-sm-4"></div>
+            <div class="container-box" style="min-width: 250px;">
+                <ul class="mid-box" style="font-size: 22px; line-height: 1.5em;">
+                    <li><a href="#">Feature Film</a></li>
+                    <li><a href="#">Short Films</a></li>
+                    <li><a href="#">Ad Film</a></li>
+                    <li><a href="#">Web Series</a></li>
+                    <li><a href="#">Animation Films</a></li>
+                    <li><a href="#">Documentaries</a></li>
+                    <li><a href="#">Corporate Films</a></li>
+                    <li><a href="#">Music Video</a></li>
+                    <li><a href="#">Youtube Content</a></li>
+                    <li><a href="#">Vertical Content</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4"></div>
+
         </div>
-        <div class="col-sm-4"></div>
 
-    </div>
-
-    <div class="next-section row" style="margin: 0px; width: 100%;" id="gallery2">
-         <!-- Left Image Slider -->
-    <div class="col-sm-4">
-        <div id="carouselLeft" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="gallery_pic.webp" class="d-block w-100" style="height: 60%;">
-                </div>
-                <div class="carousel-item">
-                    <img src="gallery_pic2.webp" class="d-block w-100" style="height: 60%;">
+        <div class="next-section row" style="margin: 0px; width: 100%;" id="gallery2">
+            <!-- Left Image Slider -->
+            <div class="col-sm-4">
+                <div id="carouselLeft" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="gallery_pic.webp" class="d-block w-100" style="height: 60%;">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="gallery_pic2.webp" class="d-block w-100" style="height: 60%;">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselLeft"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselLeft"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselLeft" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselLeft" data-bs-slide="next">
-                <span class="carousel-control-next-icon"></span>
-            </button>
-        </div>
-    </div>
-  <!-- Left Image Slider -->
+            <!-- Left Image Slider -->
 
-        <div class="container-box" style="min-width: 250px;">
-            <h4 class="vert">Gallery</h4>
-        </div>
+            <div class="container-box" style="min-width: 250px;">
+                <h4 class="vert">Gallery</h4>
+            </div>
 
-        <div class="col-sm-4"><img src="gallery_pic.webp" style="width: 100%; height: 60%;"></div>
+            <div class="col-sm-4"><img src="gallery_pic.webp" style="width: 100%; height: 60%;"></div>
 
-    </div>
-
-    
-    <div class="next-section row" style="margin: 0px; width: 100%;" id="rewards">
-        <div class="col-sm-4"><p class="scope">
-            We aim to win the hearts of the people globally, 
-            for we strongly believe that the best award is the
-            reward that we receive from the audience with their love,
-             acceptance and appreciation towards our work. 
-            </p></div>
-        <div class="container-box" style="min-width: 250px;">
-            <h4 class="vert">Rewards</h4>
-        </div>
-        <div class="col-sm-4"><p class="scope">
-            The kinds of film subjects we promise to undertake, 
-            we are confident of competing and winning prestigious 
-            film awards all around the world which will further substantiate 
-            the success of our work critically as well as commercially.
-            </p></div>
-
-    </div>
-
-    
-    <div class="next-section row" style="margin: 0px; width: 100%;" id="members">
-        <div class="col-sm-4"><p class="scope">
-            It’s an initiative we’ve mindfully taken to practice the 
-            ethics of equality – we all are equal and we work for the 
-            common interest of making films and growing together. 
-            </p></div>
-        <div class="container-box" style="min-width: 250px;">
-            <h4 class="vert">Member</h4>
-        </div>
-        <div class="col-sm-4"><p class="scope">
-            We consider the best way to implement a no-founders, 
-            no-bosses, no-hierarchy system of working is by practicing 
-            equal-member-policy where we only play our respective roles 
-            as per our respective value-adding expertise required for the given project.
-            </p></div>
-
-    </div>
-   
-  
-         <!-- Test Section -->
-
-     <div class="next-section row" style="margin: 0px; width: 100%;" id="contact">
-        <div class="col-sm-4">
-            <p><b><a href="mailto:reach@gatekeepersonfilms.com">reach@gatekeepersonfilms.com</a></b></br> for enquiry</p> </br>
-            <p><b><a href="mailto:connect@gatekeepersonfilms.com">connect@gatekeepersonfilms.com</a></b></br> to be a member</p> </br>
-            <p><b><a href="mailto:collaborate@gatekeepersonfilms.com">collaborate@gatekeepersonfilms.com</a></b></br> for business</p> </br>
-            
-        </div>
-        <div class="container-box" style="min-width: 250px;">
-            <h4 class="vert">Connect</h4>
-        </div>
-        <div class="col-sm-4">
-            <div class="social-icons">
-                <a href="https://www.facebook.com/profile.php?id=100086255863736"><i class="bi bi-facebook"></i></a>
-                <a href="https://x.com/GatekeeperSon"><i class="bi bi-twitter-x"></i></a>  <!-- X (formerly Twitter) -->
-                <a href="https://www.instagram.com/gatekeepersonfilms/"><i class="bi bi-instagram"></i></a>
-                <a href="https://www.youtube.com/@GatekeeperSonFilms"><i class="bi bi-youtube"></i></a>
-            </div><br>
-        <!--Start mailchimp-->
-        <div id="mc_embed_signup">
-            <form action="https://gmail.us13.list-manage.com/subscribe/post?u=65e1ed54b88468b48489578a0&amp;id=6d6c9a1f89" 
-                  method="post" 
-                  id="mc-embedded-subscribe-form" 
-                  name="mc-embedded-subscribe-form" 
-                  class="validate" 
-                  target="_blank">
-                  
-                <h3>Subscribe to Our Newsletter</h3>
-                <label for="mce-EMAIL" id="emial_design">Email Address *</label>
-                <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required>
-        
-                <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Subscribe">
-            </form>
-        </div>
-   <!--End mailchimp--> 
-
-        </div>
-
-    </div>
          
+
+        </div>
+
+
+        <div class="next-section row" style="margin: 0px; width: 100%;" id="rewards">
+            <div class="col-sm-4">
+                <p class="scope">
+                    We aim to win the hearts of the people globally,
+                    for we strongly believe that the best award is the
+                    reward that we receive from the audience with their love,
+                    acceptance and appreciation towards our work.
+                </p>
+            </div>
+            <div class="container-box" style="min-width: 250px;">
+                <h4 class="vert">Rewards</h4>
+            </div>
+            <div class="col-sm-4">
+                <p class="scope">
+                    The kinds of film subjects we promise to undertake,
+                    we are confident of competing and winning prestigious
+                    film awards all around the world which will further substantiate
+                    the success of our work critically as well as commercially.
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="next-section row" style="margin: 0px; width: 100%;" id="members">
+            <div class="col-sm-4">
+                <p class="scope">
+                    It’s an initiative we’ve mindfully taken to practice the
+                    ethics of equality – we all are equal and we work for the
+                    common interest of making films and growing together.
+                </p>
+            </div>
+            <div class="container-box" style="min-width: 250px;">
+                <h4 class="vert">Member</h4>
+            </div>
+            <div class="col-sm-4">
+                <p class="scope">
+                    We consider the best way to implement a no-founders,
+                    no-bosses, no-hierarchy system of working is by practicing
+                    equal-member-policy where we only play our respective roles
+                    as per our respective value-adding expertise required for the given project.
+                </p>
+            </div>
+
+        </div>
+
+
+        <!-- Test Section -->
+
+        <div class="next-section row" style="margin: 0px; width: 100%;" id="contact">
+            <div class="col-sm-4">
+                <p><b><a href="mailto:reach@gatekeepersonfilms.com">reach@gatekeepersonfilms.com</a></b></br> for
+                    enquiry</p> </br>
+                <p><b><a href="mailto:connect@gatekeepersonfilms.com">connect@gatekeepersonfilms.com</a></b></br> to be
+                    a member</p> </br>
+                <p><b><a
+                            href="mailto:collaborate@gatekeepersonfilms.com">collaborate@gatekeepersonfilms.com</a></b></br>
+                    for business</p> </br>
+
+            </div>
+            <div class="container-box" style="min-width: 250px;">
+                <h4 class="vert">Connect</h4>
+            </div>
+            <div class="col-sm-4">
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/profile.php?id=100086255863736"><i class="bi bi-facebook"></i></a>
+                    <a href="https://x.com/GatekeeperSon"><i class="bi bi-twitter-x"></i></a>
+                    <!-- X (formerly Twitter) -->
+                    <a href="https://www.instagram.com/gatekeepersonfilms/"><i class="bi bi-instagram"></i></a>
+                    <a href="https://www.youtube.com/@GatekeeperSonFilms"><i class="bi bi-youtube"></i></a>
+                </div><br>
+                <!--Start mailchimp-->
+                <div id="mc_embed_signup" class="mailchimp-container">
+                    <form
+                        action="https://gmail.us13.list-manage.com/subscribe/post?u=65e1ed54b88468b48489578a0&amp;id=6d6c9a1f89"
+                        method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
+                        target="_blank">
+                        <h3 class="mailchimp-title">Subscribe to Our Newsletter</h3>
+                        <label for="mce-EMAIL" class="mailchimp-label">Email Address *</label>
+                        <input type="email" name="EMAIL" class="required email mailchimp-input" id="mce-EMAIL" placeholder="Enter your email" required>
+                        <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button mailchimp-button" value="Subscribe">
+                    </form>
+                </div>
+                <!--End mailchimp-->
+
+            </div>
+
+        </div>
+
     </div>
-    
+
 </body>
+
 </html>
