@@ -94,16 +94,17 @@
         }
 
         .box {
-            width: 400px;
-            height: 600px;
-            padding: 4%;
-            border: 20px solid white;
-            background-color: #fbb040;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
-        }
+                width: 400px;
+                height: 600px;
+                padding: 4%;
+                border: 20px solid white;
+                background-color: #fbb040;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between; /* Space between the button and text */
+                align-items: center; /* Center the button horizontally */
+                box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+            }
 
         .text {
             font-size: 18px;
@@ -115,7 +116,7 @@
         }
 
         .button1 {
-            font-size: 1.6rem;
+            font-size: 2.4rem;
             font-family: "Bebas Neue", sans-serif;
             font-weight: 400;
             font-style: normal;
@@ -123,8 +124,11 @@
             margin: 15px 0;
             writing-mode: vertical-rl;
             text-orientation: upright;
+            top: 50%; /* Center vertically */
+            padding-top: 30px;
+          }
 
-        }
+        
 
         .home-section {
             display: none;
@@ -594,6 +598,12 @@
                font-weight: 700; 
         }
 
+
+        /* Match the height of slider images to the container-box */
+.carousel img {
+    height: 600px; /* Match the height of .container-box */
+    object-fit: cover; /* Ensures the image scales properly within the height */
+}
     </style>
 
     <script>
@@ -694,7 +704,7 @@
 <body>
 
     <div class="section entrance-section">
-        <div class="box" style="vertical-align: middle;">
+        <div class="box">
             <div class="button1" onclick="goToHomePage()">E N T E R</div>
             <p class="text" style="padding-top: 50px;">Age no bar for Art</p>
         </div>
@@ -743,15 +753,15 @@
            
                           <!-- Left Image Slider -->
             <div class="col-sm-4">
-                <div id="carouselLeft" class="carousel slide">
+                <div id="carouselLeft" class="carousel ">
                     <div class="carousel-inner">
-                         <div class="carousel-item">
+                         <div class="carousel-item active">
                             <img src="coming-soon.webp" class="d-block w-100" style="height: 60%;">
                         </div>
                         <div class="carousel-item">
                             <img src="Kainchi1.webp" class="d-block w-100" style="height: 60%;">
                         </div>
-                        <div class="carousel-item active">
+                        <div class="carousel-item">
                             <img src="Kainchi.webp" class="d-block w-100" style="height: 60%;">
                         </div>
                         <div class="carousel-item">
@@ -795,14 +805,15 @@
      <!-- Right Image Slider Start -->
      <div class="col-sm-4">
        <div id="carouselRight" class="carousel slide">
+        
          <div class="carousel-inner">
-             <div class="carousel-item">
+             <div class="carousel-item active">
                 <img src="coming-soonK.jpg" class="d-block w-100" style="height: 60%;">
             </div>
              <div class="carousel-item">
                 <img src="Kulta1.jpg" class="d-block w-100" style="height: 60%;">
             </div>
-            <div class="carousel-item active">
+            <div class="carousel-item">
                 <img src="Kulta.jpg" class="d-block w-100" style="height: 60%;">
             </div>
                <div class="carousel-item">
@@ -912,27 +923,33 @@
         <div class="next-section row" style="margin: 0px; width: 100%;" id="serviceDetails">
           <!-- Left Image Slider -->
             <div class="col-sm-4">
-                <div id="carouselLeft" class="carousel slide" data-bs-ride="carousel">
+                <div id="carouselLeft1" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
-                         <div class="carousel-item">
+                         <div class="carousel-item active">
                             <img src="1feature film.webp" class="d-block w-100" style="height: 60%;">
                         </div>
                         <div class="carousel-item">
                             <img src="2web-series.webp" class="d-block w-100" style="height: 60%;">
                         </div>
-                        <div class="carousel-item active">
+                        <div class="carousel-item">
                             <img src="6documenatry.webp" class="d-block w-100" style="height: 60%;">
                         </div>
                         <div class="carousel-item">
                             <img src="8art-curation.webp" class="d-block w-100" style="height: 60%;">
                         </div>
+                        <div class="carousel-item">
+                            <img src="service-images/9.webp" class="d-block w-100" style="height: 60%;">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="service-images/10.webp" class="d-block w-100" style="height: 60%;">
+                        </div>
                        
                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselLeft"
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselLeft1"
                         data-bs-slide="prev">
                         <span class="carousel-control-prev-icon"></span>
                     </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselLeft"
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselLeft1"
                         data-bs-slide="next">
                         <span class="carousel-control-next-icon"></span>
                     </button>
@@ -955,27 +972,33 @@
             </div>
     <!-- Right Image Slider -->
        <div class="col-sm-4">
-         <div id="carouselRight" class="carousel slide" data-bs-ride="carousel">
+         <div id="carouselRight1" class="carousel slide" data-bs-ride="carousel">
            <div class="carousel-inner">
-               <div class="carousel-item">
+               <div class="carousel-item active">
                   <img src="3short-film.webp" class="d-block w-100" style="height: 60%;">
               </div>
                <div class="carousel-item">
                  <img src="4ad-film.webp" class="d-block w-100" style="height: 60%;">
              </div>
-             <div class="carousel-item active">
+             <div class="carousel-item ">
                 <img src="5animation.webp" class="d-block w-100" style="height: 60%;">
             </div>
                <div class="carousel-item">
                 <img src="7music-video.webp" class="d-block w-100" style="height: 60%;">
             </div> 
+            <div class="carousel-item">
+                <img src="service-images/11.webp" class="d-block w-100" style="height: 60%;">
+            </div>
+            <div class="carousel-item">
+                <img src="service-images/12.webp" class="d-block w-100" style="height: 60%;">
+            </div>
                
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselRight"
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselRight1"
             data-bs-slide="prev">
             <span class="carousel-control-prev-icon"></span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselRight"
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselRight1"
             data-bs-slide="next">
             <span class="carousel-control-next-icon"></span>
         </button>
@@ -1102,7 +1125,7 @@
 
                 <h4 class="text" style="text-align: left; font-size: 25px;">Do Business</h4>
                     <p><a href="mailto:collaborate@gatekeepersonfilms.com">collaborate@gatekeepersonfilms.com</a></p><br>
-                 <div class="text-start" style="padding-left: 20px;">
+                 <div class="text-start text" style="padding-left: 20px;">
                       <a href="https://docs.google.com/forms/d/1AUcZP5VEM6qgf-_M_VfJ64WGXhhgp5rwJ4Sl42BKlyE/edit?pli=1" class="btn bg-black text-white">Click here</a>
                  </div>
 
